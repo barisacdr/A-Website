@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <br><br><br><br>
+    <header> <img src="img/logo.png" alt="Site Logo" style="image-resolution: 50, 20"></header>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: rgb(60, 38, 119);">
+        <a style="color: coral;" class="navbar-brand" href="#">BRS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav mr-auto">
+                <li><a href="home.html">
+                        HOME </a>
+                <li><a href="news.html">
+                        NEWS </a>
+                <li><a href="sport.html">
+                        SPORT </a>
+                <li><a href="travel.html">
+                        TRAVEL </a>
+                <li><a href="culture.html">
+                        CULTURE </a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"
+                        style="color: white; background-color: transparent;">
+                        MORE
+                    </a>
+                    <div style="background-color: rgb(60, 38, 119);" class="dropdown-menu">
+                        <a class="dropdown-item" style="color: white; background-color: rgb(60, 38, 119);"
+                            href="contactme.html">Contact
+                            Me</a>
+                        <a class="dropdown-item" style="color: white; background-color: rgb(60, 38, 119);"
+                            href="aboutme.html">About
+                            Me</a>
+                    </div>
+                </li>
+                <li><a href="sign_in.html">
+                        SIGN IN </a>
+        </div>
+        </div>
+        </div>
+        <div class="searchbar" class="col">
+            <form class="form-inline my-2 my-lg-0" method="get" action="https://www.google.com/search">
+                <input type="text" name="q" size="30" placeholder="Search" value="">
+                <button class="btn btn-outline-success my-2 my-sm-0 bg-coral" type="submit">Search</button>
+            </form>
+        </div>
+        </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <form name="calculator">
+            <div class="row">
+                
+                <table>
+                    <tr>
+                        <td colspan="4">
+                            <input type="text" name="display" disabled id="d">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><input class="button" type="button" value="/" onclick="calculator.display.value += '/'">
+                        </td>
+                        <td><input class="button" type="button" value="7" onclick="calculator.display.value += '7'">
+                        </td>
+                        <td><input class="button" type="button" value="8" onclick="calculator.display.value += '8'">
+                        </td>
+                        <td><input class="button" type="button" value="9" onclick="calculator.display.value += '9'">
+                        </td>
+                        <td><input class="button" type="button" value="AC" onclick="calculator.display.value = ''">
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td><input class="button" type="button" value="x" onclick="calculator.display.value += '*'">
+                        </td>
+                        <td><input class="button" type="button" value="4" onclick="calculator.display.value += '4'">
+                        </td>
+                        <td><input class="button" type="button" value="5" onclick="calculator.display.value += '5'">
+                        </td>
+                        <td><input class="button" type="button" value="6" onclick="calculator.display.value += '6'">
+                        </td>
+                        <td><input class="button" type="button" value="DEL"
+                                onclick="calculator.display.value = calculator.display.value.substr(0,calculator.display.value.length-1)">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input class="button" type="button" value="+" onclick="calculator.display.value += '+'">
+                        </td>
+                        <td><input class="button" type="button" value="1" onclick="calculator.display.value += '1'">
+                        </td>
+                        <td><input class="button" type="button" value="2" onclick="calculator.display.value += '2'">
+                        </td>
+                        <td><input class="button" type="button" value="3" onclick="calculator.display.value += '3'">
+                        </td>
+                        <td><input class="button" type="button" value="1/x"
+                                onclick="calculator.display.value = eval(calculator.display.value(Math.pow(value, -1)))">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><input class="button" type="button" value="-" onclick="calculator.display.value += '-'">
+                        </td>
+                        <td><input class="button" type="button" value="." onclick="calculator.display.value += '.'">
+                        </td>
+                        <td><input class="button" type="button" value="0" onclick="calculator.display.value += '0'">
+                        </td>
+                        <td colspan="2"><input class="button" type="button" value="="
+                                onclick="calculator.display.value = eval(calculator.display.value)"></td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+
+
+    </div>
+    <footer>
+        <p style="background-color: transparent;">© 2021 Barish Acar - All Rights Reserved </p>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
